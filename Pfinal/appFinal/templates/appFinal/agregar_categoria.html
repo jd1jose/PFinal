@@ -1,0 +1,16 @@
+{% extends "appFinal/base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Agregar Categoría</h2>
+
+<div class="card p-4">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button class="btn btn-success w-100">Guardar</button>
+    </form>
+</div>
+
+{% endblock %}

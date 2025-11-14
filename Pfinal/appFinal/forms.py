@@ -1,7 +1,13 @@
 from django import forms
-from .models import Persona
+from .models import Categoria, Producto
 
-class PersonaForm(forms.ModelForm):
+class CategoriaForm(forms.ModelForm):
     class Meta:
-        model = Persona
-        fields = ['nombre', 'correo']
+        model = Categoria
+        fields = ['nombre', 'descripcion']
+
+
+class ProductoForm(forms.ModelForm):
+    class Meta:
+        model = Producto
+        fields = ['nombre', 'descripcion', 'precio', 'stock', 'categoria']
